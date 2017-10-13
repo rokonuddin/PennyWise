@@ -10,26 +10,67 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    // Graph view displays on landscape
+
+    @IBOutlet var graphView: GraphView!
+
+    // Shows arc and pointer to see percentage spent overall
+
+    @IBOutlet weak var summaryView: SummaryView!
+
+    // Save bar button items in landscape
+    private var rightBarButtonItem:UIBarButtonItem?
+    private var leftBarButtonItem:UIBarButtonItem?
+
+    private var budgetTableViewController:BudgetTableViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        rightBarButtonItem = navigationItem.rightBarButtonItem
+        leftBarButtonItem = navigationItem.leftBarButtonItem
+
+        let image = UIImage(named: "pennywise_logo")
+        navigationItem.titleView = UIImageView(image: image)
+        calculateBudget()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func calculateBudget() {
+        // recalculate totals
+        let totalSpent = categories.reduce(0, {$0 + $1.spent} )
+        let totalBudget = categories.reduce(0, {$0 + $1.budget} )
+        if totalBudget > 0 {
+            summaryView.percentSpent = totalSpent / totalBudget
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if size.width > size.height {
+            // add graph view to the screen
+            // and define the constraints
+            view.addSubview(graphView)
+            graphView.translatesAutoresizingMaskIntoConstraints = false
+            graphView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            graphView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            graphView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            graphView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+
+            // hide navigation bar buttons on landscape
+            navigationItem.rightBarButtonItem = nil
+            navigationItem.leftBarButtonItem = nil
+
+        } else {
+            graphView.removeFromSuperview()
+
+            // show navigation bar buttons
+            navigationItem.rightBarButtonItem = rightBarButtonItem
+            navigationItem.leftBarButtonItem = leftBarButtonItem
+        }
+
     }
-    */
+
+
+
 
 }

@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--PennyWise-->
         <scene sceneID="tne-QT-ifu">
@@ -24,7 +29,7 @@
                                     <segue destination="idu-B1-ukg" kind="embed" id="UlE-K0-Mzd"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEi-lF-Pai">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEi-lF-Pai" customClass="SummaryView" customModule="PennyWise" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="191"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtK-2u-15D">
@@ -68,12 +73,34 @@
                     </view>
                     <navigationItem key="navigationItem" title="PennyWise" id="fyT-ef-GZf">
                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="Kdm-0g-Qzk"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dPu-Ka-jER"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dPu-Ka-jER">
+                            <connections>
+                                <segue destination="JuJ-rL-m3M" kind="presentation" id="DxC-1a-kQb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="graphView" destination="N1P-ta-hOw" id="8Ox-IU-SMs"/>
+                        <outlet property="summaryView" destination="ZEi-lF-Pai" id="mJ5-a0-gSY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="N1P-ta-hOw" customClass="GraphView" customModule="PennyWise" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="258"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="PUx-dI-YNJ"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Expense-->
+        <scene sceneID="8AN-oy-OqK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Expense" id="JuJ-rL-m3M" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Tb-lb-Ud1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yuy-vr-doY">
@@ -97,18 +124,66 @@
         <scene sceneID="7uZ-55-UUD">
             <objects>
                 <tableViewController id="idu-B1-ukg" customClass="BudgetTableViewController" customModule="PennyWise" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="giz-Qa-B9m">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="giz-Qa-B9m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="407"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="N8K-Yu-G30">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BudgetCell" id="N8K-Yu-G30" customClass="BudgetCell" customModule="PennyWise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N8K-Yu-G30" id="lf9-Fp-8z6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-82-l5x">
+                                            <rect key="frame" x="20" y="0.0" width="335" height="99.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Td5-sg-e5g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loy-0D-OkJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="S0S-m1-gVw">
+                                                            <rect key="frame" x="282.5" y="0.0" width="52.5" height="50"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qi-pb-ImH" customClass="BudgetView" customModule="PennyWise" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="50" width="335" height="49.5"/>
+                                                    <color key="backgroundColor" red="0.30980392159999998" green="0.36078431370000003" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="7qi-pb-ImH" secondAttribute="bottom" id="EQZ-52-62U"/>
+                                                <constraint firstItem="7qi-pb-ImH" firstAttribute="leading" secondItem="jTa-82-l5x" secondAttribute="leading" id="KNV-4K-k9g"/>
+                                                <constraint firstItem="7qi-pb-ImH" firstAttribute="top" secondItem="Td5-sg-e5g" secondAttribute="bottom" id="LMP-iB-WcJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Td5-sg-e5g" secondAttribute="trailing" id="eXV-IK-IG0"/>
+                                                <constraint firstAttribute="trailing" secondItem="7qi-pb-ImH" secondAttribute="trailing" id="l7E-OB-5R8"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jTa-82-l5x" secondAttribute="trailing" constant="20" id="Fbd-ue-g96"/>
+                                        <constraint firstItem="jTa-82-l5x" firstAttribute="top" secondItem="lf9-Fp-8z6" secondAttribute="top" id="Wxw-A8-qrh"/>
+                                        <constraint firstAttribute="bottom" secondItem="jTa-82-l5x" secondAttribute="bottom" id="hoS-gW-YPa"/>
+                                        <constraint firstItem="jTa-82-l5x" firstAttribute="leading" secondItem="lf9-Fp-8z6" secondAttribute="leading" constant="20" id="ra0-el-JPw"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.75686274509999996" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
+                                <connections>
+                                    <outlet property="budgetView" destination="7qi-pb-ImH" id="RDp-fi-8s9"/>
+                                    <outlet property="nameLabel" destination="Loy-0D-OkJ" id="fBD-jg-DW1"/>
+                                    <outlet property="spentLabel" destination="S0S-m1-gVw" id="hcw-1l-Wgb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

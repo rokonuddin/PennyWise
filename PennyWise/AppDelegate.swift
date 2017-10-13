@@ -8,6 +8,24 @@
 
 import UIKit
 
+// Globals
+let π = CGFloat(Double.pi)
+
+let lightViewColor = UIColor(red: 165/255, green: 193/255, blue: 207/255, alpha: 1.0)
+let darkViewColor = UIColor(red: 145/255, green: 175/255, blue: 191/255, alpha: 1.0)
+
+let darkTextColor = UIColor(red: 79/255, green: 92/255, blue: 105/255, alpha: 1.0)
+let cellSelectedColor = UIColor(red: 79/255, green: 92/255, blue: 105/255, alpha: 1.0)
+let buttonEnabledColor = UIColor(red: 246/255, green: 158/255, blue: 81/255, alpha: 1.0)
+
+let appGreenColor = UIColor(red: 146/255, green: 203/255, blue: 149/255, alpha: 1.0)
+let appOrangeColor = UIColor(red: 249/255, green: 158/255, blue: 78/255, alpha: 1.0)
+let appRedColor = UIColor(red: 1.0, green: 107/255, blue: 107/255, alpha: 1.0)
+
+let cellGradientStart = UIColor(red: 94/255, green: 219/255, blue: 159/255, alpha: 1.0)
+let cellGradientEnd = UIColor(red: 171/255, green: 227/255, blue: 1.0, alpha: 1.0)
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

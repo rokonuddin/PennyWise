@@ -16,6 +16,14 @@
 		3A8B9F161F8F867800920911 /* BudgetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B9F151F8F867800920911 /* BudgetTableViewController.swift */; };
 		3A8B9F181F8F869A00920911 /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B9F171F8F869A00920911 /* BudgetCell.swift */; };
 		3A8B9F1A1F8F86B000920911 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B9F191F8F86B000920911 /* BudgetView.swift */; };
+		3A8D0E601F908F9300C57483 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D0E5F1F908F9300C57483 /* Category.swift */; };
+		3A8D0E631F909BA800C57483 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D0E621F909BA800C57483 /* GraphView.swift */; };
+		3AED5A1E1F90C672009BEF86 /* Expense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AED5A1D1F90C672009BEF86 /* Expense.storyboard */; };
+		3AED5A201F90C692009BEF86 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED5A1F1F90C692009BEF86 /* ExpenseViewController.swift */; };
+		3AED5A241F90C6BE009BEF86 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED5A231F90C6BE009BEF86 /* NumberView.swift */; };
+		3AED5A261F90C6F4009BEF86 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED5A251F90C6F4009BEF86 /* CategoryCell.swift */; };
+		3AED5A281F90CA12009BEF86 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED5A271F90CA12009BEF86 /* CategoryViewController.swift */; };
+		3AED5A2A1F90CB3E009BEF86 /* NumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED5A291F90CB3E009BEF86 /* NumberButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		3A8B9F151F8F867800920911 /* BudgetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTableViewController.swift; sourceTree = "<group>"; };
 		3A8B9F171F8F869A00920911 /* BudgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
 		3A8B9F191F8F86B000920911 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		3A8D0E5F1F908F9300C57483 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3A8D0E621F909BA800C57483 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		3AED5A1D1F90C672009BEF86 /* Expense.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Expense.storyboard; sourceTree = "<group>"; };
+		3AED5A1F1F90C692009BEF86 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
+		3AED5A231F90C6BE009BEF86 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		3AED5A251F90C6F4009BEF86 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		3AED5A271F90CA12009BEF86 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		3AED5A291F90CB3E009BEF86 /* NumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +78,11 @@
 		3A8B9EFD1F8F844F00920911 /* PennyWise */ = {
 			isa = PBXGroup;
 			children = (
-				3A8B9EFE1F8F844F00920911 /* AppDelegate.swift */,
 				3A8B9F101F8F861700920911 /* Budget */,
+				3AED5A1C1F90C64D009BEF86 /* Expense */,
+				3A8D0E611F909B8D00C57483 /* Chart */,
+				3A8D0E5E1F908F7B00C57483 /* Model */,
+				3A8B9EFE1F8F844F00920911 /* AppDelegate.swift */,
 				3A8B9F051F8F844F00920911 /* Assets.xcassets */,
 				3A8B9F071F8F844F00920911 /* LaunchScreen.storyboard */,
 				3A8B9F0A1F8F844F00920911 /* Info.plist */,
@@ -82,6 +101,35 @@
 				3A8B9F191F8F86B000920911 /* BudgetView.swift */,
 			);
 			path = Budget;
+			sourceTree = "<group>";
+		};
+		3A8D0E5E1F908F7B00C57483 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A8D0E5F1F908F9300C57483 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A8D0E611F909B8D00C57483 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				3A8D0E621F909BA800C57483 /* GraphView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		3AED5A1C1F90C64D009BEF86 /* Expense */ = {
+			isa = PBXGroup;
+			children = (
+				3AED5A1D1F90C672009BEF86 /* Expense.storyboard */,
+				3AED5A1F1F90C692009BEF86 /* ExpenseViewController.swift */,
+				3AED5A231F90C6BE009BEF86 /* NumberView.swift */,
+				3AED5A251F90C6F4009BEF86 /* CategoryCell.swift */,
+				3AED5A271F90CA12009BEF86 /* CategoryViewController.swift */,
+				3AED5A291F90CB3E009BEF86 /* NumberButton.swift */,
+			);
+			path = Expense;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8B9F091F8F844F00920911 /* LaunchScreen.storyboard in Resources */,
+				3AED5A1E1F90C672009BEF86 /* Expense.storyboard in Resources */,
 				3A8B9F061F8F844F00920911 /* Assets.xcassets in Resources */,
 				3A8B9F041F8F844F00920911 /* Main.storyboard in Resources */,
 			);
@@ -157,11 +206,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8B9F181F8F869A00920911 /* BudgetCell.swift in Sources */,
+				3AED5A2A1F90CB3E009BEF86 /* NumberButton.swift in Sources */,
 				3A8B9F1A1F8F86B000920911 /* BudgetView.swift in Sources */,
+				3AED5A201F90C692009BEF86 /* ExpenseViewController.swift in Sources */,
 				3A8B9F161F8F867800920911 /* BudgetTableViewController.swift in Sources */,
+				3AED5A281F90CA12009BEF86 /* CategoryViewController.swift in Sources */,
 				3A8B9EFF1F8F844F00920911 /* AppDelegate.swift in Sources */,
 				3A8B9F121F8F863600920911 /* MainViewController.swift in Sources */,
 				3A8B9F141F8F866300920911 /* SummaryView.swift in Sources */,
+				3A8D0E601F908F9300C57483 /* Category.swift in Sources */,
+				3AED5A241F90C6BE009BEF86 /* NumberView.swift in Sources */,
+				3A8D0E631F909BA800C57483 /* GraphView.swift in Sources */,
+				3AED5A261F90C6F4009BEF86 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
