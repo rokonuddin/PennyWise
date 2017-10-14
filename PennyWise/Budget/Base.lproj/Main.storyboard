@@ -82,6 +82,7 @@
                     <connections>
                         <outlet property="graphView" destination="N1P-ta-hOw" id="8Ox-IU-SMs"/>
                         <outlet property="summaryView" destination="ZEi-lF-Pai" id="mJ5-a0-gSY"/>
+                        <segue destination="JuJ-rL-m3M" kind="presentation" id="2HQ-c5-Vqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -197,4 +198,7 @@
             <point key="canvasLocation" x="457" y="746"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DxC-1a-kQb"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-//@IBDesignable
+@IBDesignable
 class BudgetView: UIView {
 
     var percent: Float = 0.5 {
@@ -17,14 +17,14 @@ class BudgetView: UIView {
         }
     }
 
-    //@IBInspectable
+    @IBInspectable
     var percentLineColor: UIColor = appGreenColor
-    //@IBInspectable
+    @IBInspectable
     var percentWarningLineColor: UIColor = appOrangeColor
-    //@IBInspectable
+    @IBInspectable
     var percentDangerLineColor:UIColor = appRedColor
 
-    //@IBInspectable
+    @IBInspectable
     var lineWidth: CGFloat = 13
 
     override func draw(_ rect: CGRect) {
@@ -33,10 +33,10 @@ class BudgetView: UIView {
         let path = UIBezierPath()
         path.lineWidth = lineWidth
 
-        path.move(to: CGPoint(x: 0, y: rect.height/2))
+        path.move(to: CGPoint(x: 0, y: round(rect.height/2)+0.5))
 
         let end = rect.width * CGFloat(percent)
-        path.addLine(to: CGPoint(x: end, y: rect.height/2))
+        path.addLine(to: CGPoint(x: end, y: round(rect.height/2)+0.5))
 
         if percent >= 1.0 {
             percentDangerLineColor.setStroke()
@@ -45,7 +45,7 @@ class BudgetView: UIView {
         } else {
             percentLineColor.setStroke()
         }
-
+        path.lineCapStyle = .round
         path.stroke()
     }
 

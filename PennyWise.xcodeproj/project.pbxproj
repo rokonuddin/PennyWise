@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FE66AE01F92368D00B4D6D9 /* DrawIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE66ADF1F92368D00B4D6D9 /* DrawIcon.swift */; };
+		2FE66AE81F925ABD00B4D6D9 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE66AE71F925ABD00B4D6D9 /* Icons.swift */; };
 		3A8B9EFF1F8F844F00920911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B9EFE1F8F844F00920911 /* AppDelegate.swift */; };
 		3A8B9F041F8F844F00920911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B9F021F8F844F00920911 /* Main.storyboard */; };
 		3A8B9F061F8F844F00920911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B9F051F8F844F00920911 /* Assets.xcassets */; };
@@ -27,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FD0833C1F921B6C00D842C2 /* IconFun.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = IconFun.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2FE66ADF1F92368D00B4D6D9 /* DrawIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawIcon.swift; sourceTree = "<group>"; };
+		2FE66AE71F925ABD00B4D6D9 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		3A8B9EFB1F8F844F00920911 /* PennyWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennyWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8B9EFE1F8F844F00920911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8B9F031F8F844F00920911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FD0833B1F9219FF00D842C2 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				2FD0833C1F921B6C00D842C2 /* IconFun.playground */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
 		3A8B9EF21F8F844F00920911 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 		3A8B9EFD1F8F844F00920911 /* PennyWise */ = {
 			isa = PBXGroup;
 			children = (
+				2FD0833B1F9219FF00D842C2 /* Playground */,
 				3A8B9F101F8F861700920911 /* Budget */,
 				3AED5A1C1F90C64D009BEF86 /* Expense */,
 				3A8D0E611F909B8D00C57483 /* Chart */,
@@ -106,7 +120,9 @@
 		3A8D0E5E1F908F7B00C57483 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2FE66AE71F925ABD00B4D6D9 /* Icons.swift */,
 				3A8D0E5F1F908F9300C57483 /* Category.swift */,
+				2FE66ADF1F92368D00B4D6D9 /* DrawIcon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,9 +225,11 @@
 				3AED5A2A1F90CB3E009BEF86 /* NumberButton.swift in Sources */,
 				3A8B9F1A1F8F86B000920911 /* BudgetView.swift in Sources */,
 				3AED5A201F90C692009BEF86 /* ExpenseViewController.swift in Sources */,
+				2FE66AE01F92368D00B4D6D9 /* DrawIcon.swift in Sources */,
 				3A8B9F161F8F867800920911 /* BudgetTableViewController.swift in Sources */,
 				3AED5A281F90CA12009BEF86 /* CategoryViewController.swift in Sources */,
 				3A8B9EFF1F8F844F00920911 /* AppDelegate.swift in Sources */,
+				2FE66AE81F925ABD00B4D6D9 /* Icons.swift in Sources */,
 				3A8B9F121F8F863600920911 /* MainViewController.swift in Sources */,
 				3A8B9F141F8F866300920911 /* SummaryView.swift in Sources */,
 				3A8D0E601F908F9300C57483 /* Category.swift in Sources */,

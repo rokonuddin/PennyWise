@@ -12,6 +12,7 @@ class Category: Equatable {
     var name: String
     var budget: Float
     var spent: Float
+    lazy var iconPath: UIBezierPath? = drawIcon()
 
     lazy var image: UIImage? = {
         UIImage(named: "Icon" + self.name)
@@ -21,6 +22,18 @@ class Category: Equatable {
         self.name = name
         self.budget = budget
         self.spent = spent
+    }
+    
+    func drawIcon() -> UIBezierPath? {
+        var path: UIBezierPath?
+        
+        switch name {
+        case "Fun":
+            path = DrawIcon.drawFunIcon()
+        default:
+            ()
+        }
+        return path
     }
 }
 

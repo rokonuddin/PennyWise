@@ -13,12 +13,17 @@ class NumberButton: UIButton {
 
 
     @IBInspectable
-    var lineWidth:CGFloat = 2
+    var lineWidth:CGFloat = 3
 
     @IBInspectable
-    var fillColor:UIColor = UIColor.red
+    var fillColor:UIColor = #colorLiteral(red: 0.7843137255, green: 0.8509803922, blue: 0.8784313725, alpha: 1)
     @IBInspectable
-    var strokeColor:UIColor = UIColor.blue
+    var strokeColor:UIColor = #colorLiteral(red: 0.3098039216, green: 0.3607843137, blue: 0.4117647059, alpha: 1)
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setTitleColor(strokeColor, for: .normal)
+    }
 
     override func draw(_ rect: CGRect) {
         let insetRect = rect.insetBy(dx: lineWidth/2, dy: lineWidth/2)
