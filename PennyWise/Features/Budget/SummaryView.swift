@@ -11,7 +11,11 @@ import UIKit
 @IBDesignable
 class SummaryView: UIView {
 
-    var percentSpent: Float = 0
+    var percentSpent: Float = 0 {
+        didSet {
+            rotatePointer()
+        }
+    }
     
     var lineWidth: CGFloat {
         return bounds.height / 4
@@ -38,6 +42,14 @@ class SummaryView: UIView {
         pointerLayer.position = CGPoint(x: bounds.midX, y: bounds.height - margin)
     }
     
+    private func rotatePointer() {
+        if percentSpent > 1 {
+            percentSpent = 1
+        }
+        let angle = -π/2 + π * CGFloat(percentSpent)
+        let transform = CGAffineTransform(rotationAngle: angle)
+        pointerLayer.setAffineTransform(transform)
+    }
     func createPointerPat() -> UIBezierPath {
         let pointerHeight = bounds.height - lineWidth - margin
         let pointerWidth: CGFloat = 18

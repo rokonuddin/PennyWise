@@ -172,9 +172,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSo-BP-FFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-470" y="106"/>
+            <point key="canvasLocation" x="-574" y="106"/>
         </scene>
-        <!--Title-->
+        <!--Budget-->
         <scene sceneID="3se-1g-XFY">
             <objects>
                 <viewController id="OAC-Ei-HGd" customClass="ExpenseViewController" customModule="PennyWise" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,10 +189,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="83.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9t-qW-363" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="0.0" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="72" id="Gdo-DL-zBw"/>
-                                                    <constraint firstAttribute="width" constant="72" id="OUT-sx-tbb"/>
+                                                    <constraint firstAttribute="height" constant="64" id="Gdo-DL-zBw"/>
+                                                    <constraint firstAttribute="width" constant="64" id="OUT-sx-tbb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="7"/>
@@ -201,10 +201,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFv-P6-b7j" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="119.5" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="123.5" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="72" id="4CU-Gs-SMM"/>
-                                                    <constraint firstAttribute="height" constant="72" id="jEV-es-nkP"/>
+                                                    <constraint firstAttribute="width" constant="64" id="4CU-Gs-SMM"/>
+                                                    <constraint firstAttribute="height" constant="64" id="jEV-es-nkP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="8"/>
@@ -213,10 +213,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXl-O7-OEk" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="239" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="247" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="72" id="Yms-KK-U5W"/>
-                                                    <constraint firstAttribute="height" constant="72" id="cY1-Yd-0P7"/>
+                                                    <constraint firstAttribute="width" constant="64" id="Yms-KK-U5W"/>
+                                                    <constraint firstAttribute="height" constant="64" id="cY1-Yd-0P7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="9"/>
@@ -230,10 +230,10 @@
                                         <rect key="frame" x="0.0" y="83.5" width="311" height="83.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdf-Pt-I1l" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="0.0" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="72" id="Cgt-CG-EKg"/>
-                                                    <constraint firstAttribute="height" constant="72" id="YCh-Ft-La5"/>
+                                                    <constraint firstAttribute="width" constant="64" id="Cgt-CG-EKg"/>
+                                                    <constraint firstAttribute="height" constant="64" id="YCh-Ft-La5"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="4"/>
@@ -242,10 +242,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A01-y4-8Hf" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="119.5" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="123.5" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="72" id="3ah-2q-suN"/>
-                                                    <constraint firstAttribute="height" constant="72" id="FaP-s2-zfR"/>
+                                                    <constraint firstAttribute="width" constant="64" id="3ah-2q-suN"/>
+                                                    <constraint firstAttribute="height" constant="64" id="FaP-s2-zfR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="5"/>
@@ -254,10 +254,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80T-Fo-bCb" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="239" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="247" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="72" id="QJc-qK-5wQ"/>
-                                                    <constraint firstAttribute="width" constant="72" id="rRn-hO-cjC"/>
+                                                    <constraint firstAttribute="height" constant="64" id="QJc-qK-5wQ"/>
+                                                    <constraint firstAttribute="width" constant="64" id="rRn-hO-cjC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="6"/>
@@ -271,10 +271,10 @@
                                         <rect key="frame" x="0.0" y="167" width="311" height="83"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46p-so-ZFC" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="0.0" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="72" id="JwU-wn-eWQ"/>
-                                                    <constraint firstAttribute="height" constant="72" id="QXf-Qz-OfJ"/>
+                                                    <constraint firstAttribute="width" constant="64" id="JwU-wn-eWQ"/>
+                                                    <constraint firstAttribute="height" constant="64" id="QXf-Qz-OfJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="1"/>
@@ -283,10 +283,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrX-4x-Pry" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="119.5" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="123.5" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="72" id="6AA-uH-vUc"/>
-                                                    <constraint firstAttribute="height" constant="72" id="qOt-wR-H0W"/>
+                                                    <constraint firstAttribute="width" constant="64" id="6AA-uH-vUc"/>
+                                                    <constraint firstAttribute="height" constant="64" id="qOt-wR-H0W"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="2"/>
@@ -295,10 +295,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC3-IG-BHZ" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="239" y="5.5" width="72" height="72"/>
+                                                <rect key="frame" x="247" y="9.5" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="72" id="2IK-kJ-TGU"/>
-                                                    <constraint firstAttribute="height" constant="72" id="bG7-Xm-bjo"/>
+                                                    <constraint firstAttribute="width" constant="64" id="EbP-nK-8Wj"/>
+                                                    <constraint firstAttribute="height" constant="64" id="bG7-Xm-bjo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="3"/>
@@ -312,10 +312,10 @@
                                         <rect key="frame" x="0.0" y="250" width="311" height="83.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwG-X2-aOL" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="6" width="72" height="72"/>
+                                                <rect key="frame" x="0.0" y="10" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="72" id="2y2-Gi-ZHQ"/>
-                                                    <constraint firstAttribute="width" constant="72" id="psF-pi-rOj"/>
+                                                    <constraint firstAttribute="height" constant="64" id="2y2-Gi-ZHQ"/>
+                                                    <constraint firstAttribute="width" constant="64" id="psF-pi-rOj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="."/>
@@ -324,10 +324,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seg-RG-iCc" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="119.5" y="6" width="72" height="72"/>
+                                                <rect key="frame" x="123.5" y="10" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="72" id="LR3-Oe-Oql"/>
-                                                    <constraint firstAttribute="height" constant="72" id="rEV-AA-RT3"/>
+                                                    <constraint firstAttribute="width" constant="64" id="LR3-Oe-Oql"/>
+                                                    <constraint firstAttribute="height" constant="64" id="rEV-AA-RT3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="0"/>
@@ -336,10 +336,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-Hc-laO" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
-                                                <rect key="frame" x="239" y="6" width="72" height="72"/>
+                                                <rect key="frame" x="247" y="10" width="64" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="72" id="0ic-sJ-FfR"/>
-                                                    <constraint firstAttribute="width" constant="72" id="0yz-xV-NLJ"/>
+                                                    <constraint firstAttribute="height" constant="64" id="0ic-sJ-FfR"/>
+                                                    <constraint firstAttribute="width" constant="64" id="0yz-xV-NLJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                                 <state key="normal" title="↩︎"/>
@@ -449,7 +449,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ER0-NL-HYV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="5WN-FL-wdl">
+                    <navigationItem key="navigationItem" title="Budget" id="5WN-FL-wdl">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9LK-W4-FfM">
                             <connections>
                                 <action selector="cancelButtonAction:" destination="OAC-Ei-HGd" id="pMQ-lh-4bH"/>
@@ -464,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Uh-kw-ZyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1441" y="113"/>
+            <point key="canvasLocation" x="1767" y="106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wrQ-T3-H8c">
@@ -482,7 +482,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0M-qn-QHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="106"/>
+            <point key="canvasLocation" x="978" y="113"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

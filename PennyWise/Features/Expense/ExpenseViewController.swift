@@ -136,6 +136,7 @@ extension ExpenseViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        selectedCategory = categories[indexPath.row]
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.setNeedsDisplay()
     }

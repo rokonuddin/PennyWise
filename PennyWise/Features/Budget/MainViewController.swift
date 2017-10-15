@@ -69,14 +69,13 @@ class MainViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let _ = segue.identifier else { return }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
+        guard let navigationController = segue.destination as? UINavigationController,
+            let controller = navigationController.viewControllers.first as? ExpenseViewController else { return }
         
-        guard let navigationController = segue.destination as? UINavigationController else { return }
-        if let controller = navigationController.viewControllers.first as? ExpenseViewController,
-            let indexPath = sender as? IndexPath {
+        controller.delegate = self
+        if let indexPath = sender as? IndexPath {
             controller.selectedCategory = categories[indexPath.row]
-            controller.delegate = self
         }
     }
     
