@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rGF-Jw-QhA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--PennyWise-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PennyWise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEi-lF-Pai" customClass="SummaryView" customModule="PennyWise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="176"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtK-2u-15D">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="za6-mq-ZiI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPT-Dx-pGx">
+                                        <rect key="frame" x="0.0" y="174" width="375" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="41u-DA-qXq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.36078431370000003" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wPT-Dx-pGx" secondAttribute="bottom" id="2yE-w5-dmT"/>
+                                    <constraint firstItem="CtK-2u-15D" firstAttribute="leading" secondItem="ZEi-lF-Pai" secondAttribute="leading" id="P1o-n0-7v9"/>
+                                    <constraint firstAttribute="trailing" secondItem="CtK-2u-15D" secondAttribute="trailing" id="WHD-O0-dnf"/>
+                                    <constraint firstItem="CtK-2u-15D" firstAttribute="top" secondItem="ZEi-lF-Pai" secondAttribute="top" id="Xw9-Qm-Rla"/>
+                                    <constraint firstAttribute="trailing" secondItem="wPT-Dx-pGx" secondAttribute="trailing" id="tNH-T5-vi4"/>
+                                    <constraint firstItem="wPT-Dx-pGx" firstAttribute="leading" secondItem="ZEi-lF-Pai" secondAttribute="leading" id="vxu-bw-ZSy"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aD7-Q4-7F2">
+                                <rect key="frame" x="0.0" y="240" width="375" height="427"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BudgetCell" id="fx3-h7-d9G" customClass="BudgetCell" customModule="PennyWise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fx3-h7-d9G" id="Kix-XW-tZL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="e1f-FR-RoF">
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="99.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Fom-DV-KVe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCd-ok-0bM">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52.5" height="50"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="voO-03-uX5">
+                                                                    <rect key="frame" x="282.5" y="0.0" width="52.5" height="50"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="giE-b5-tfw" customClass="BudgetView" customModule="PennyWise" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="50" width="335" height="49.5"/>
+                                                            <color key="backgroundColor" red="0.30980392159999998" green="0.36078431370000003" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="giE-b5-tfw" secondAttribute="bottom" id="31m-eK-9pd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="giE-b5-tfw" secondAttribute="trailing" id="QqD-2p-b2r"/>
+                                                        <constraint firstItem="giE-b5-tfw" firstAttribute="leading" secondItem="e1f-FR-RoF" secondAttribute="leading" id="cUp-Pf-F1g"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Fom-DV-KVe" secondAttribute="trailing" id="oOh-ld-tJ4"/>
+                                                        <constraint firstItem="giE-b5-tfw" firstAttribute="top" secondItem="Fom-DV-KVe" secondAttribute="bottom" id="xVM-0O-YJ7"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="e1f-FR-RoF" firstAttribute="top" secondItem="Kix-XW-tZL" secondAttribute="top" id="5RU-pY-T38"/>
+                                                <constraint firstAttribute="trailing" secondItem="e1f-FR-RoF" secondAttribute="trailing" constant="20" id="L7Q-fP-1VL"/>
+                                                <constraint firstAttribute="bottom" secondItem="e1f-FR-RoF" secondAttribute="bottom" id="OsP-qF-yok"/>
+                                                <constraint firstItem="e1f-FR-RoF" firstAttribute="leading" secondItem="Kix-XW-tZL" secondAttribute="leading" constant="20" id="VcZ-uz-cZD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.64705882349999999" green="0.75686274509999996" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
+                                        <connections>
+                                            <outlet property="budgetView" destination="giE-b5-tfw" id="hHA-Rs-hJ3"/>
+                                            <outlet property="nameLabel" destination="fCd-ok-0bM" id="qyk-QF-8MZ"/>
+                                            <outlet property="spentLabel" destination="voO-03-uX5" id="VoS-l2-SMY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bmQ-wf-vmg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8aP-kF-2WU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64705882349999999" green="0.75686274509999996" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aD7-Q4-7F2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M4A-0R-rb6"/>
+                            <constraint firstItem="ZEi-lF-Pai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OAe-NY-IEN"/>
+                            <constraint firstItem="aD7-Q4-7F2" firstAttribute="top" secondItem="ZEi-lF-Pai" secondAttribute="bottom" id="ZD0-2K-tGK"/>
+                            <constraint firstItem="aD7-Q4-7F2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bZL-pa-jYq"/>
+                            <constraint firstItem="aD7-Q4-7F2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.64" id="nhi-F7-toD"/>
+                            <constraint firstItem="ZEi-lF-Pai" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rn3-CZ-Ifc"/>
+                            <constraint firstItem="aD7-Q4-7F2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uhA-ZM-OOo"/>
+                            <constraint firstItem="ZEi-lF-Pai" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xyI-Ea-N54"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PennyWise" id="fyT-ef-GZf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Kdm-0g-Qzk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dPu-Ka-jER">
+                            <connections>
+                                <segue destination="H8K-CH-p6z" kind="presentation" id="9ze-E1-GQM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="graphView" destination="N1P-ta-hOw" id="8Ox-IU-SMs"/>
+                        <outlet property="summaryView" destination="ZEi-lF-Pai" id="mJ5-a0-gSY"/>
+                        <outlet property="tableView" destination="aD7-Q4-7F2" id="4UJ-E6-Zhq"/>
+                        <segue destination="H8K-CH-p6z" kind="presentation" identifier="CategoryExpense" id="fGm-lZ-lWd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="N1P-ta-hOw" customClass="GraphView" customModule="PennyWise" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="258"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.64705882349999999" green="0.75686274509999996" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <viewLayoutGuide key="safeArea" id="PUx-dI-YNJ"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="182" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yuy-vr-doY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rGF-Jw-QhA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bqF-Lj-DW3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hul-sJ-5iN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSo-BP-FFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-470" y="106"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="3se-1g-XFY">
+            <objects>
+                <viewController id="OAC-Ei-HGd" customClass="ExpenseViewController" customModule="PennyWise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qdM-rg-plS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-bS-aqI">
+                                <rect key="frame" x="32" y="313.5" width="311" height="333.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mI1-8z-C1o">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="83.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9t-qW-363" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="Gdo-DL-zBw"/>
+                                                    <constraint firstAttribute="width" constant="72" id="OUT-sx-tbb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="Zbm-L4-ZPy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFv-P6-b7j" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="119.5" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="4CU-Gs-SMM"/>
+                                                    <constraint firstAttribute="height" constant="72" id="jEV-es-nkP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="Y34-1D-ofY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXl-O7-OEk" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="239" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="Yms-KK-U5W"/>
+                                                    <constraint firstAttribute="height" constant="72" id="cY1-Yd-0P7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="23J-eh-zT0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tKB-5P-z9B">
+                                        <rect key="frame" x="0.0" y="83.5" width="311" height="83.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdf-Pt-I1l" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="Cgt-CG-EKg"/>
+                                                    <constraint firstAttribute="height" constant="72" id="YCh-Ft-La5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="JqJ-gf-bmH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A01-y4-8Hf" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="119.5" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="3ah-2q-suN"/>
+                                                    <constraint firstAttribute="height" constant="72" id="FaP-s2-zfR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="Ywx-JK-r23"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80T-Fo-bCb" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="239" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="QJc-qK-5wQ"/>
+                                                    <constraint firstAttribute="width" constant="72" id="rRn-hO-cjC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="Mjs-hG-reI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-7k-MjV">
+                                        <rect key="frame" x="0.0" y="167" width="311" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46p-so-ZFC" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="JwU-wn-eWQ"/>
+                                                    <constraint firstAttribute="height" constant="72" id="QXf-Qz-OfJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="Jth-jm-D9k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrX-4x-Pry" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="119.5" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="6AA-uH-vUc"/>
+                                                    <constraint firstAttribute="height" constant="72" id="qOt-wR-H0W"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="d7m-ld-WEN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC3-IG-BHZ" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="239" y="5.5" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="2IK-kJ-TGU"/>
+                                                    <constraint firstAttribute="height" constant="72" id="bG7-Xm-bjo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="nzs-N1-BBf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vo6-TB-08Q">
+                                        <rect key="frame" x="0.0" y="250" width="311" height="83.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwG-X2-aOL" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="6" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="2y2-Gi-ZHQ"/>
+                                                    <constraint firstAttribute="width" constant="72" id="psF-pi-rOj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="."/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="pp1-vs-IyO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seg-RG-iCc" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="119.5" y="6" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="LR3-Oe-Oql"/>
+                                                    <constraint firstAttribute="height" constant="72" id="rEV-AA-RT3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="A8U-ps-dVk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-Hc-laO" customClass="NumberButton" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="239" y="6" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="0ic-sJ-FfR"/>
+                                                    <constraint firstAttribute="width" constant="72" id="0yz-xV-NLJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="↩︎"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="oih-yd-ktI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPA-cL-LvX" userLabel="ResultBar">
+                                <rect key="frame" x="0.0" y="263.5" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giU-Ou-wny">
+                                        <rect key="frame" x="300" y="0.0" width="75" height="50"/>
+                                        <color key="backgroundColor" red="0.96470588235294119" green="0.61960784313725492" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonAction:" destination="OAC-Ei-HGd" eventType="touchUpInside" id="wDX-t7-wGs"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtq-yz-cSr">
+                                        <rect key="frame" x="231" y="0.0" width="61" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPf-6p-r38">
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eii-xu-Py1">
+                                                <rect key="frame" x="40.5" y="0.0" width="20.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1960784314" green="0.23529411759999999" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="giU-Ou-wny" secondAttribute="bottom" id="BLq-jP-dwh"/>
+                                    <constraint firstAttribute="bottom" secondItem="vtq-yz-cSr" secondAttribute="bottom" id="LVy-xa-BQh"/>
+                                    <constraint firstItem="giU-Ou-wny" firstAttribute="leading" secondItem="vtq-yz-cSr" secondAttribute="trailing" constant="8" id="PoS-UF-9p8"/>
+                                    <constraint firstItem="giU-Ou-wny" firstAttribute="width" secondItem="vPA-cL-LvX" secondAttribute="width" multiplier="0.2" id="Qym-SY-yHB"/>
+                                    <constraint firstItem="giU-Ou-wny" firstAttribute="top" secondItem="vPA-cL-LvX" secondAttribute="top" id="cMI-kl-sie"/>
+                                    <constraint firstAttribute="trailing" secondItem="giU-Ou-wny" secondAttribute="trailing" id="kvY-8R-vDn"/>
+                                    <constraint firstItem="vtq-yz-cSr" firstAttribute="top" secondItem="vPA-cL-LvX" secondAttribute="top" id="qxW-H3-j8P"/>
+                                    <constraint firstAttribute="height" constant="50" id="zDY-kv-t5N"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwH-r8-JJa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="199.5"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n6r-tQ-0zG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u40-DJ-em5">
+                                            <size key="itemSize" width="100" height="100"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="32" minY="16" maxX="32" maxY="16"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="Jfq-KH-JXi" customClass="CategoryCell" customModule="PennyWise" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="16" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="OAC-Ei-HGd" id="suM-DT-Mh4"/>
+                                            <outlet property="delegate" destination="OAC-Ei-HGd" id="aUO-SA-wGt"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="n6r-tQ-0zG" secondAttribute="trailing" id="En3-vW-5yJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="n6r-tQ-0zG" secondAttribute="bottom" id="M49-vE-Nd5"/>
+                                    <constraint firstItem="n6r-tQ-0zG" firstAttribute="top" secondItem="HwH-r8-JJa" secondAttribute="top" id="b25-hB-uQ2"/>
+                                    <constraint firstItem="n6r-tQ-0zG" firstAttribute="leading" secondItem="HwH-r8-JJa" secondAttribute="leading" id="uP2-Wi-KxV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64705882349999999" green="0.75686274509999996" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vPA-cL-LvX" firstAttribute="trailing" secondItem="ER0-NL-HYV" secondAttribute="trailing" id="J7v-Y7-LS4"/>
+                            <constraint firstItem="ER0-NL-HYV" firstAttribute="trailing" secondItem="GUE-bS-aqI" secondAttribute="trailing" constant="32" id="PZW-kL-Vsk"/>
+                            <constraint firstItem="vPA-cL-LvX" firstAttribute="leading" secondItem="ER0-NL-HYV" secondAttribute="leading" id="QX5-wd-REH"/>
+                            <constraint firstItem="GUE-bS-aqI" firstAttribute="height" secondItem="qdM-rg-plS" secondAttribute="height" multiplier="0.5" id="VXq-OB-U4n"/>
+                            <constraint firstItem="ER0-NL-HYV" firstAttribute="bottom" secondItem="GUE-bS-aqI" secondAttribute="bottom" constant="20" id="eio-kF-sB1"/>
+                            <constraint firstItem="HwH-r8-JJa" firstAttribute="leading" secondItem="ER0-NL-HYV" secondAttribute="leading" id="f5Q-0C-EiY"/>
+                            <constraint firstItem="GUE-bS-aqI" firstAttribute="leading" secondItem="ER0-NL-HYV" secondAttribute="leading" constant="32" id="i3p-ao-Ui2"/>
+                            <constraint firstItem="vPA-cL-LvX" firstAttribute="top" secondItem="HwH-r8-JJa" secondAttribute="bottom" id="kcF-Vs-S55"/>
+                            <constraint firstItem="GUE-bS-aqI" firstAttribute="top" secondItem="vPA-cL-LvX" secondAttribute="bottom" id="lnn-NX-RI1"/>
+                            <constraint firstItem="HwH-r8-JJa" firstAttribute="trailing" secondItem="ER0-NL-HYV" secondAttribute="trailing" id="vg7-Tt-4pH"/>
+                            <constraint firstItem="HwH-r8-JJa" firstAttribute="top" secondItem="ER0-NL-HYV" secondAttribute="top" id="zlo-vs-ogB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ER0-NL-HYV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="5WN-FL-wdl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9LK-W4-FfM">
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="OAC-Ei-HGd" id="pMQ-lh-4bH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="n6r-tQ-0zG" id="C8i-9R-n6G"/>
+                        <outlet property="displayLabel" destination="eii-xu-Py1" id="zvA-gf-19W"/>
+                        <outlet property="doneButton" destination="giU-Ou-wny" id="Pg3-sF-8Ol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Uh-kw-ZyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wrQ-T3-H8c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H8K-CH-p6z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tEq-Q7-AwZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OAC-Ei-HGd" kind="relationship" relationship="rootViewController" id="6JM-gB-VC8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0M-qn-QHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="106"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fGm-lZ-lWd"/>
+    </inferredMetricsTieBreakers>
+</document>
