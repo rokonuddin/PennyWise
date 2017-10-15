@@ -22,12 +22,20 @@ class CategoryCell: UICollectionViewCell {
         if isSelected {
             UIColor.red.setStroke()
         } else {
-            UIColor.green.setStroke()
+            UIColor.white.setStroke()
         }
         
         let edge = UIBezierPath(roundedRect: rect.insetBy(dx: lineWidth/2, dy: lineWidth/2), cornerRadius: 10)
         edge.lineWidth = lineWidth
-        edge.stroke()
+        edge.addClip()
+        
+        let endPoint = CGPoint(x: 0, y: rect.height)
+        
+        drawGradient(colors: [cellGradientStart,
+                              cellGradientEnd],
+                              startingPoint: .zero,
+                              endPoint: endPoint)
+        
         
         guard let name = category?.name  else { return }
         
@@ -51,7 +59,6 @@ class CategoryCell: UICollectionViewCell {
     }
     
     private func scalePath(path: UIBezierPath, size: CGSize) {
-        
         let scale = size.height / path.bounds.size.height * 0.5
         path.apply(CGAffineTransform(scaleX: scale, y: scale))
         path.apply(CGAffineTransform.init(translationX: -path.bounds.origin.x, y: -path.bounds.origin.y))

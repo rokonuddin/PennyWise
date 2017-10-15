@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2FE66AE01F92368D00B4D6D9 /* DrawIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE66ADF1F92368D00B4D6D9 /* DrawIcon.swift */; };
 		2FE66AE81F925ABD00B4D6D9 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE66AE71F925ABD00B4D6D9 /* Icons.swift */; };
+		2FE66AEB1F926C2E00B4D6D9 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE66AEA1F926C2E00B4D6D9 /* UIView+Gradient.swift */; };
 		3A8B9EFF1F8F844F00920911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B9EFE1F8F844F00920911 /* AppDelegate.swift */; };
 		3A8B9F041F8F844F00920911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B9F021F8F844F00920911 /* Main.storyboard */; };
 		3A8B9F061F8F844F00920911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B9F051F8F844F00920911 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		2FD0833C1F921B6C00D842C2 /* IconFun.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = IconFun.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2FE66ADF1F92368D00B4D6D9 /* DrawIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawIcon.swift; sourceTree = "<group>"; };
 		2FE66AE71F925ABD00B4D6D9 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		2FE66AEA1F926C2E00B4D6D9 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		3A8B9EFB1F8F844F00920911 /* PennyWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennyWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8B9EFE1F8F844F00920911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8B9F031F8F844F00920911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 			path = Playground;
 			sourceTree = "<group>";
 		};
+		2FE66AE91F9269F500B4D6D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FE66AEA1F926C2E00B4D6D9 /* UIView+Gradient.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3A8B9EF21F8F844F00920911 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		3A8B9EFD1F8F844F00920911 /* PennyWise */ = {
 			isa = PBXGroup;
 			children = (
+				2FE66AE91F9269F500B4D6D9 /* Extensions */,
 				2FD0833B1F9219FF00D842C2 /* Playground */,
 				3A8B9F101F8F861700920911 /* Budget */,
 				3AED5A1C1F90C64D009BEF86 /* Expense */,
@@ -223,6 +234,7 @@
 			files = (
 				3A8B9F181F8F869A00920911 /* BudgetCell.swift in Sources */,
 				3AED5A2A1F90CB3E009BEF86 /* NumberButton.swift in Sources */,
+				2FE66AEB1F926C2E00B4D6D9 /* UIView+Gradient.swift in Sources */,
 				3A8B9F1A1F8F86B000920911 /* BudgetView.swift in Sources */,
 				3AED5A201F90C692009BEF86 /* ExpenseViewController.swift in Sources */,
 				2FE66AE01F92368D00B4D6D9 /* DrawIcon.swift in Sources */,

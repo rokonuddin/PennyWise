@@ -17,7 +17,7 @@ class SummaryView: UIView {
         return bounds.height / 4
     }
     
-    let margin: CGFloat = 20
+    let margin: CGFloat = 30
     let pointerLayer = CAShapeLayer()
     
     override func didMoveToSuperview() {
@@ -61,8 +61,27 @@ class SummaryView: UIView {
         
         let path = UIBezierPath(arcCenter: arcCenter, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         path.lineWidth = lineWidth
-        appGreenColor.setStroke()
-        path.stroke()
+        
+       guard let newCGPath = CGPath(__byStroking: path.cgPath,
+                               transform: nil,
+                               lineWidth: path.lineWidth,
+                               lineCap: path.lineCapStyle,
+                               lineJoin: path.lineJoinStyle,
+                               miterLimit: path.miterLimit)
+        else { return }
+        
+        let newPath = UIBezierPath(cgPath: newCGPath)
+        UIColor.white.setFill()
+        newPath.fill()
+        
+        newPath.addClip()
+        
+        drawGradient(colors: [appGreenColor, UIColor.white], startingPoint: CGPoint(x: 0, y: rect.height), endPoint: CGPoint(x: rect.midX, y: rect.midY))
+        drawGradient(colors: [UIColor.white, appRedColor], startingPoint: CGPoint(x: rect.midX, y: rect.midY), endPoint: CGPoint(x: rect.width, y: rect.height))
+        
+        UIColor.lightGray.setStroke()
+        newPath.lineWidth = 2
+        newPath.stroke()
         
     }
 }

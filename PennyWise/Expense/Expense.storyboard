@@ -197,6 +197,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlV-0y-45g">
                                         <rect key="frame" x="300" y="0.0" width="75" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.69245462595734886" blue="0.32082373934880071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -240,7 +241,7 @@
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sck-Td-oY0">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="dCa-fG-nC1" kind="embed" id="Qbu-ll-5yX"/>
                                         </connections>
@@ -255,7 +256,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.6470588235294118" green="0.75686274509803919" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dTi-we-gId" firstAttribute="leading" secondItem="VS7-j8-mfg" secondAttribute="leading" constant="32" id="5Hu-2R-Tuo"/>
                             <constraint firstItem="ZAY-h5-Fj4" firstAttribute="trailing" secondItem="VS7-j8-mfg" secondAttribute="trailing" id="5Od-Tt-iMo"/>

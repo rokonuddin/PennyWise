@@ -29,8 +29,8 @@ class MainViewController: UIViewController {
 
         rightBarButtonItem = navigationItem.rightBarButtonItem
         leftBarButtonItem = navigationItem.leftBarButtonItem
-
-        let image = UIImage(named: "pennywise_logo")
+        
+        let image = #imageLiteral(resourceName: "pennywise_logo")
         navigationItem.titleView = UIImageView(image: image)
         calculateBudget()
     }

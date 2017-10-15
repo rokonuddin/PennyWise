@@ -19,12 +19,12 @@ class Icons : NSObject {
     //// Cache
     
     private struct Cache {
-        static let color: UIColor = UIColor(red: 0.000, green: 1.000, blue: 0.00, alpha: 1.000)
-        static let selectedColor: UIColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1.000)
+        static let unSelectedColor: UIColor = UIColor.white
+        static let selectedColor: UIColor = UIColor.red
     }
     
     //// Colors
-    class var color: UIColor { return Cache.color }
+    class var unSelectedColor: UIColor { return Cache.unSelectedColor }
     class var selectedColor: UIColor { return Cache.selectedColor }
     
     //// Drawing Methods
@@ -34,12 +34,8 @@ class Icons : NSObject {
         // This non-generic function dramatically improves compilation times of complex expressions.
         func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
         
-        //// Color Declarations
-        let unSelectedColor = UIColor(red: 0.460, green: 0.970, blue: 0.000, alpha: 1.000)
-        
         //// Variable Declarations
-        let expression = isSelected ? Icons.selectedColor : unSelectedColor
-        
+        let expression = isSelected ? Icons.selectedColor : Icons.unSelectedColor
         
         //// Subframes
         let cart: CGRect = CGRect(x: frame.minX + fastFloor(frame.width * 0.08125) + 0.5, y: frame.minY + fastFloor(frame.height * 0.07375) + 0.5, width: fastFloor(frame.width * 0.91875) - fastFloor(frame.width * 0.08125), height: fastFloor(frame.height * 0.92375) - fastFloor(frame.height * 0.07375))
@@ -107,11 +103,9 @@ class Icons : NSObject {
         // This non-generic function dramatically improves compilation times of complex expressions.
         func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
         
-        //// Color Declarations
-        let unSelectedColor = UIColor(red: 0.460, green: 0.970, blue: 0.000, alpha: 1.000)
         
         //// Variable Declarations
-        let expression = isSelected ? Icons.selectedColor : unSelectedColor
+        let expression = isSelected ? Icons.selectedColor : Icons.unSelectedColor
         
         
         //// Subframes
@@ -151,12 +145,9 @@ class Icons : NSObject {
         //// General Declarations
         // This non-generic function dramatically improves compilation times of complex expressions.
         func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
-        
-        //// Color Declarations
-        let unSelectedColor = UIColor(red: 0.460, green: 0.970, blue: 0.000, alpha: 1.000)
-        
+    
         //// Variable Declarations
-        let expression = isSelected ? Icons.selectedColor : unSelectedColor
+        let expression = isSelected ? Icons.selectedColor : Icons.unSelectedColor
         
         
         //// Subframes
@@ -204,11 +195,9 @@ class Icons : NSObject {
         // This non-generic function dramatically improves compilation times of complex expressions.
         func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
         
-        //// Color Declarations
-        let unSelectedColor = UIColor(red: 0.460, green: 0.970, blue: 0.000, alpha: 1.000)
-        
+    
         //// Variable Declarations
-        let expression = isSelected ? Icons.selectedColor : unSelectedColor
+        let expression = isSelected ? Icons.selectedColor : Icons.unSelectedColor
         
         
         //// Subframes
@@ -227,23 +216,23 @@ class Icons : NSObject {
         carBodyPath.addLine(to: CGPoint(x: car.minX + 0.00037 * car.width, y: car.minY + 0.62000 * car.height))
         carBodyPath.addCurve(to: CGPoint(x: car.minX + 0.04505 * car.width, y: car.minY + 0.36564 * car.height), controlPoint1: CGPoint(x: car.minX + 0.00037 * car.width, y: car.minY + 0.62000 * car.height), controlPoint2: CGPoint(x: car.minX + -0.00708 * car.width, y: car.minY + 0.44657 * car.height))
         carBodyPath.close()
-        expression.setStroke()
-        carBodyPath.lineWidth = 3
-        carBodyPath.stroke()
+//        expression.setStroke()
+//        carBodyPath.lineWidth = 3
+//        carBodyPath.stroke()
         
         
         //// Wheel1 Drawing
         let wheel1Path = UIBezierPath(ovalIn: CGRect(x: car.minX + fastFloor(car.width * 0.14260) + 0.5, y: car.minY + fastFloor(car.height * 0.71757) + 0.5, width: fastFloor(car.width * 0.35574) - fastFloor(car.width * 0.14260), height: fastFloor(car.height * 0.99791) - fastFloor(car.height * 0.71757)))
-        expression.setStroke()
-        wheel1Path.lineWidth = 3
-        wheel1Path.stroke()
+//        expression.setStroke()
+//        wheel1Path.lineWidth = 3
+//        wheel1Path.stroke()
         
         
         //// Wheel2 Drawing
         let wheel2Path = UIBezierPath(ovalIn: CGRect(x: car.minX + fastFloor(car.width * 0.62742 + 0.5), y: car.minY + fastFloor(car.height * 0.71967 + 0.5), width: fastFloor(car.width * 0.84056 + 0.5) - fastFloor(car.width * 0.62742 + 0.5), height: fastFloor(car.height * 1.00000 + 0.5) - fastFloor(car.height * 0.71967 + 0.5)))
-        expression.setStroke()
-        wheel2Path.lineWidth = 3
-        wheel2Path.stroke()
+//        expression.setStroke()
+//        wheel2Path.lineWidth = 3
+//        wheel2Path.stroke()
         
         
         //// Window Drawing
@@ -253,9 +242,22 @@ class Icons : NSObject {
         windowPath.addLine(to: CGPoint(x: car.minX + 0.67036 * car.width, y: car.minY + 0.30000 * car.height))
         windowPath.addCurve(to: CGPoint(x: car.minX + 0.59905 * car.width, y: car.minY + 0.16000 * car.height), controlPoint1: CGPoint(x: car.minX + 0.67036 * car.width, y: car.minY + 0.30000 * car.height), controlPoint2: CGPoint(x: car.minX + 0.65254 * car.width, y: car.minY + 0.21500 * car.height))
         windowPath.addCurve(to: CGPoint(x: car.minX + 0.45642 * car.width, y: car.minY + 0.08000 * car.height), controlPoint1: CGPoint(x: car.minX + 0.54556 * car.width, y: car.minY + 0.10500 * car.height), controlPoint2: CGPoint(x: car.minX + 0.45642 * car.width, y: car.minY + 0.08000 * car.height))
+//        expression.setStroke()
+//        windowPath.lineWidth = 2
+//        windowPath.stroke()
+        
+        let bezierPath = UIBezierPath()
+        bezierPath.append(carBodyPath)
+        bezierPath.append(wheel1Path)
+        bezierPath.append(wheel2Path)
+        bezierPath.append(windowPath)
+        
         expression.setStroke()
-        windowPath.lineWidth = 2
-        windowPath.stroke()
+        bezierPath.lineWidth = 2
+        bezierPath.stroke()
+        
+        bezierPath.addClip()
+        
     }
     
     class func drawMisc(frame: CGRect = CGRect(x: 0, y: 0, width: 400, height: 400), isSelected: Bool = false) {
@@ -263,12 +265,8 @@ class Icons : NSObject {
         // This non-generic function dramatically improves compilation times of complex expressions.
         func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
         
-        //// Color Declarations
-        let unSelectedColor = UIColor(red: 0.460, green: 0.970, blue: 0.000, alpha: 1.000)
-        
         //// Variable Declarations
-        let expression = isSelected ? Icons.selectedColor : unSelectedColor
-        
+        let expression = isSelected ? Icons.selectedColor : Icons.unSelectedColor
         
         //// Subframes
         let group: CGRect = CGRect(x: frame.minX + fastFloor(frame.width * 0.32875) + 0.5, y: frame.minY + fastFloor(frame.height * 0.12875) + 0.5, width: fastFloor(frame.width * 0.67220 - 0.38) - fastFloor(frame.width * 0.32875) + 0.38, height: fastFloor(frame.height * 0.86875) - fastFloor(frame.height * 0.12875))
@@ -295,11 +293,9 @@ class Icons : NSObject {
     }
     
     class func drawUtilities(frame: CGRect = CGRect(x: 0, y: 0, width: 400, height: 400), isSelected: Bool = false) {
-        //// Color Declarations
-        let unSelectedColor = UIColor(red: 0.460, green: 0.970, blue: 0.000, alpha: 1.000)
         
         //// Variable Declarations
-        let expression = isSelected ? Icons.selectedColor : unSelectedColor
+        let expression = isSelected ? Icons.selectedColor : Icons.unSelectedColor
         
         //// Bezier Drawing
         let bezierPath = UIBezierPath()
